@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!-- Indica al navegador que este es un documento HTML5 moderno -->
+<html lang="es">
+<head>
+    <!-- Configuración básica de la página (Metadatos) -->
+    <meta charset="UTF-8"> <!-- Permite mostrar eñes, acentos y caracteres especiales correctamente -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la web sea responsiva (se adapte a celulares y tabletas) -->
+    <title>Mi Sitio Web en GitHub</title> <!-- El título que aparece en la pestaña del navegador -->
+
+    <!-- SECCIÓN DE ESTILOS (CSS): Controla los colores, tamaños y diseño visual -->
+    <style>
+        /* 1. RESETEO GENERAL: Limpia los márgenes por defecto del navegador */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Evita que los bordes alteren el tamaño real de los elementos */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografía limpia y moderna */
+        }
+
+        /* 2. DISEÑO DEL CUERPO (BODY): Estructura toda la pantalla */
+        body {
+            background-color: #f6f8fa; /* Fondo gris claro (estilo GitHub) */
+            color: #24292f; /* Texto gris oscuro para que sea fácil de leer */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Fuerza al footer a quedarse abajo si hay poco contenido */
+        }
+
+        /* 3. ENCABEZADO (HEADER): Barra superior de presentación */
+        header {
+            background-color: #24292f; /* Fondo oscuro */
+            color: #ffffff; /* Texto blanco */
+            padding: 2rem; /* Espaciado interno */
+            text-align: center; /* Centra el texto */
+        }
+
+        header h1 {
+            font-size: 2.5rem; /* Tamaño de letra grande */
+            margin-bottom: 0.5rem; /* Espacio debajo del título */
+        }
+
+        header p {
+            color: #8c959f; /* Texto secundario gris claro */
+            font-size: 1.1rem;
+        }
+
+        /* 4. CONTENIDO PRINCIPAL (MAIN): El contenedor del centro */
+        main {
+            flex: 1; /* Absorbe el espacio disponible para empujar el footer hacia abajo */
+            max-width: 800px; /* Ancho máximo para que no se deforme en pantallas gigantes */
+            margin: 2rem auto; /* Centra el bloque horizontalmente y le da espacio arriba/abajo */
+            padding: 0 1rem; /* Espacio de seguridad en los lados para pantallas de celulares */
+        }
+
+        /* 5. TARJETAS (CARDS): Bloques blancos de información */
+        .card {
+            background-color: #ffffff; /* Fondo blanco */
+            border: 1px solid #d0d7de; /* Borde sutil gris */
+            border-radius: 6px; /* Esquinas ligeramente redondeadas */
+            padding: 2rem; /* Espaciado interno del texto */
+            margin-bottom: 2rem; /* Espacio de separación con la siguiente tarjeta */
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* Sombra muy suave para dar profundidad */
+        }
+
+        .card h2 {
+            border-bottom: 1px solid #d0d7de; /* Línea divisoria debajo del subtítulo */
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            color: #0969da; /* Azul GitHub para los subtítulos */
+        }
+
+        .card p {
+            line-height: 1.6; /* Mayor espacio entre líneas para leer mejor */
+            margin-bottom: 1rem; /* Espacio debajo de cada párrafo */
+        }
+
+        /* 6. BOTÓN INTERACTIVO */
+        .btn {
+            display: inline-block;
+            background-color: #2da44e; /* Verde de éxito (estilo botón de GitHub) */
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            text-decoration: none; /* Quita la línea de subrayado del enlace */
+            border-radius: 6px;
+            font-weight: 600; /* Letra un poco más gruesa */
+            transition: background-color 0.2s; /* Efecto de transición suave al pasar el mouse */
+        }
+
+        /* Efecto Hover: Cambia el color del botón cuando pasas el mouse por encima */
+        .btn:hover {
+            background-color: #2c974b; /* Verde un poco más oscuro */
+        }
+
+        /* 7. PIE DE PÁGINA (FOOTER) */
+        footer {
+            background-color: #24292f;
+            color: #8c959f;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+            margin-top: auto; /* Se asegura de estar al fondo del todo */
+        }
+
+        footer a {
+            color: #58a6ff; /* Enlace de color azul claro */
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SECCIÓN ENCABEZADO: Título de la web -->
+    <header>
+        <h1>¡Hola, Mundo desde GitHub!</h1>
+        <p>Bienvenido a mi proyecto web alojado de forma gratuita.</p>
+    </header>
+
+    <!-- SECCIÓN CONTENIDO PRINCIPAL: Contiene la información relevante -->
+    <main>
+        
+        <!-- Tarjeta 1: Información sobre el proyecto -->
+        <section class="card">
+            <h2>Sobre este proyecto</h2>
+            <p>Este es un ejemplo de una estructura web básica utilizando <strong>HTML5 y CSS3</strong>. GitHub Pages compila este código de forma automática y lo transforma en un sitio web público accesible desde cualquier parte del mundo.</p>
+            <p>Puedes editar este archivo, añadir más secciones o personalizar los estilos visuales para adaptarlo a tus necesidades.</p>
+            <!-- Botón de enlace externo. target="_blank" hace que se abra en otra pestaña -->
+            <a href="https://github.com" target="_blank" class="btn">Visitar mi GitHub</a>
+        </section>
+
+        <!-- Tarjeta 2: Guía de pasos -->
+        <section class="card">
+            <h2>¿Cómo lo subo a GitHub?</h2>
+            <p>Sigue estos sencillos pasos rápidos:</p>
+            <!-- Lista desordenada (puntos) con estilos de separación -->
+            <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                <li>Crea un repositorio público en GitHub.</li>
+                <li>Sube este archivo renombrado exactamente como <strong>index.html</strong>.</li>
+                <li>Ve a <strong>Settings</strong> > <strong>Pages</strong> dentro de tu repositorio.</li>
+                <li>Selecciona la rama <strong>main</strong> (o master) y haz clic en <strong>Save</strong>.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- SECCIÓN PIE DE PÁGINA: Créditos o derechos de autor -->
+    <footer>
+        <p>Creado con ❤️ para GitHub Pages | <a href="#">Volver arriba</a></p>
+    </footer>
+
+</body>
+</html>
